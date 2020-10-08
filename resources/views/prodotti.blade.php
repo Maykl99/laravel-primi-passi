@@ -159,43 +159,49 @@ foreach ($cards as $val) {
     @include('templates.header')
 
     <main>
+      <div class="h4">Cortissime</div>
       <section class="cortissime">
-        <div class="card" style="width: 18rem;">
+        
+        
             @foreach ($cortissime as $card)
-       
-            <img src="{{$card['src']}}" class="card-img-top" alt="{{$card['titolo']}}">
-            <div class="card-body">
-              <p class="card-text">{{$card['titolo']}}</p>
+            <div class="card" style="width: 15rem;">
+                <img src="{{$card['src']}}" class="card-img-top" alt="{{$card['titolo']}}">
+                <div class="card-body">
+                  <p class="card-text">{{$card['titolo']}}</p>
+                </div>
             </div>
-    
             @endforeach
-          </div>
+          
       </section>
 
+      <div class="h4">Corte</div>
       <section class="corte">
-        <div class="card" style="width: 18rem;">
-            @foreach ($corte as $card)
+        
        
-            <img src="{{$card['src']}}" class="card-img-top" alt="{{$card['titolo']}}">
-            <div class="card-body">
-              <p class="card-text">{{$card['titolo']}}</p>
-            </div>
-    
-            @endforeach
+            @foreach ($corte as $card)
+            <div class="card" style="width: 15rem;">
+              <img src="{{$card['src']}}" class="card-img-top" alt="{{$card['titolo']}}">
+              <div class="card-body">
+                <p class="card-text">{{$card['titolo']}}</p>
+              </div>
           </div>
+            @endforeach
+          
       </section>
 
+      <div class="h4">Lunghe</div>
       <section class="lunghe">
-        <div class="card" style="width: 18rem;">
-            @foreach ($lunghe as $card)
+        
        
-            <img src="{{$card['src']}}" class="card-img-top" alt="{{$card['titolo']}}">
-            <div class="card-body">
-              <p class="card-text">{{$card['titolo']}}</p>
+            @foreach ($lunghe as $card)
+            <div class="card" style="width: 15rem;">
+              <img src="{{$card['src']}}" class="card-img-top" alt="{{$card['titolo']}}">
+              <div class="card-body">
+                <p class="card-text">{{$card['titolo']}}</p>
+              </div>
             </div>
-    
             @endforeach
-          </div>
+          
       </section>
     </main>
 </body>

@@ -2,19 +2,18 @@
 
 /* creare una cartella img nella cartella resources */
 
-table{
-    height: calc(100vh - 81px);;
+section{
+    padding: 20px 20px;
 }
 
-table .col-titolo{
-    font-size: 30px;
+.card{
+    margin: 3px;
+    padding: 5px;
 }
 
-table img{
-    width: 100%;
+.corte,.lunghe{
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#tbl{
-    margin-bottom: 0;
-}
 
