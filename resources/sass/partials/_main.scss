@@ -2,18 +2,30 @@
 
 /* creare una cartella img nella cartella resources */
 
+
+
 section{
     padding: 20px 20px;
+        .card{
+        margin: 3px;
+        padding: 5px;
+
+        .corte,.lunghe{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
 }
 
-.card{
-    margin: 3px;
-    padding: 5px;
+
+
+main{
+    .container-main{
+        background-image: url('../../pippo/pasta-pippo.png');
+        height: 100vh;
+        background-position-x: center;
+    }
 }
 
-.corte,.lunghe{
-    display: flex;
-    flex-wrap: wrap;
-}
 
 

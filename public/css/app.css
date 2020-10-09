@@ -22,14 +22,20 @@ section {
   padding: 20px 20px;
 }
 
-.card {
+section .card {
   margin: 3px;
   padding: 5px;
 }
 
-.corte,
-.lunghe {
+section .card .corte,
+section .card .lunghe {
   display: flex;
   flex-wrap: wrap;
+}
+
+main .container-main {
+  background-image: url(/images/pasta-pippo.png?1011def69ad1e68c6efcc2f2bc3e5ba6);
+  height: 100vh;
+  background-position-x: center;
 }
 

@@ -1,0 +1,1 @@
+{{-- reo gli @yield('name') -> richiamo nella pagina con l'istruzione @extends('name') --}}
