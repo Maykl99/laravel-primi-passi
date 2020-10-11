@@ -7,7 +7,7 @@
 </head>
 
 @section('main')
-<div class="contenitore container-fluid">
+<div class="contenitore">
 {{--     <nav class="navbar-contact">
         <ul>
             <li><a href="#home">Home</a></li>
@@ -17,7 +17,7 @@
         </ul>
     </nav> --}}
 
-    <section id="home">
+{{--     <section id="home">
         <h1>Welcome to my site</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis velit aspernatur harum placeat architecto vitae adipisci soluta, tempore neque, facilis, laboriosam eius aut consequatur maxime voluptatem odio quisquam non rem?</p>
     </section>
@@ -35,6 +35,6 @@
     <section id="contact">
         <h2>Contact</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo repudiandae, placeat architecto nulla recusandae magnam quod repellendus, minima quo iste perferendis soluta. Ducimus provident deserunt quidem mollitia hic sapiente repudiandae.</p>
-    </section>
+    </section> --}}
 </div>
 @endsection

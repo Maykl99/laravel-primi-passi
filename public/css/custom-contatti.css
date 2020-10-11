@@ -18,7 +18,10 @@ body{
 }
 
 .contenitore{
-    width: 100%;
+    background-image: url('https://www.lamolisana.it/wp-content/uploads/2017/07/53-lumachine-ricetta.jpg');
+    height: 100vh;
+    background-position-x: center;
+    width: 80%;
     height: 100%;
     overflow-y: scroll;
     scroll-behavior: smooth;
