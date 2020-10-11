@@ -126,3 +126,4 @@ $data = '[
     $db=json_decode($data,true);
 
     return $db; #ritorna un array in php
+    #$cards=json_last_error ($data);

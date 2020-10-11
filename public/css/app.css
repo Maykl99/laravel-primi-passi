@@ -18,17 +18,21 @@ body {
 
 /* creare una cartella img nella cartella resources */
 
-section {
+section.cortissime,
+section.corte,
+section.lunghe {
   padding: 20px 20px;
 }
 
-section .card {
+section.cortissime .card,
+section.corte .card,
+section.lunghe .card {
   margin: 3px;
   padding: 5px;
 }
 
-section .card .corte,
-section .card .lunghe {
+.corte,
+.lunghe {
   display: flex;
   flex-wrap: wrap;
 }
@@ -37,5 +41,6 @@ main .container-main {
   background-image: url(/images/pasta-pippo.png?1011def69ad1e68c6efcc2f2bc3e5ba6);
   height: 100vh;
   background-position-x: center;
+  background-repeat: no-repeat;
 }
 

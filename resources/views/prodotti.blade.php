@@ -1,9 +1,7 @@
 @php
 
-$cards=config('prodotti'); 
- #prova a mettere false
-#$cards=json_last_error ($data);
-#dd($cards);
+$cards=config('prodotti',true);  #prova a mettere false
+
 $cortissime=[];
 $corte=[];
 $lunghe=[];
@@ -17,15 +15,13 @@ foreach ($cards as $val) {
         $cortissime[]= $val;
 }
 
-#var_dump($lunghe,$corte,$cortissime);
-
 @endphp
 
-
-    {{-- @include('templates.header') --}}
-
-
       @extends('layout.app')
+
+      @section('css')
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
+      @endsection
 
       @section('titolo','Prodotti Molisana')
     

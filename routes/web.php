@@ -21,8 +21,9 @@ Route::get('/prodotti', function () {
     return view('prodotti');
 })->name('prodotti');
 
-Route::get('/contatti', function () {
+Route::get('/contatti{name?}', function () {
     return view('contatti');
 })->name('contatti');
+
 
 
