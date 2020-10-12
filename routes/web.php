@@ -13,17 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('home');
-})->name('index'); # mi permette di chiamare le rotte per i collegamenti
+})->name('index'); # mi permette di chiamare le rotte per i collegamenti */
 
-Route::get('/prodotti', function () {
+Route::get('/', 'StaticPageController@home')->name('index');
+Route::get('/prodotti', 'StaticPageController@prodotti')->name('prodotti');
+Route::get('/contatti', 'StaticPageController@contatti')->name('contatti');
+
+/* Route::get('/prodotti', function () {  
     return view('prodotti');
-})->name('prodotti');
+})->name('prodotti'); */
 
-Route::get('/contatti{name?}', function () {
+/* Route::get('/contatti{name?}', function () {
     return view('contatti');
-})->name('contatti');
+})->name('contatti'); */
 
 
 
