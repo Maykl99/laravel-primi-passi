@@ -1,23 +1,6 @@
-@php
 
-$cards=config('prodotti',true);  #prova a mettere false
 
-$cortissime=[];
-$corte=[];
-$lunghe=[];
-
-foreach ($cards as $val) {
-    if($val['tipo'] == 'lunga'){
-        $lunghe[]= $val;
-    }elseif($val['tipo'] == 'corta'){
-        $corte[]= $val;
-    }else
-        $cortissime[]= $val;
-}
-
-@endphp
-
-      @extends('layout.app')
+    @extends('layout.app')
 
       @section('css')
         <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
@@ -30,9 +13,9 @@ foreach ($cards as $val) {
         <section class="cortissime">
           
           
-              @foreach ($cortissime as $card)
+              @foreach ($cortissime as $key => $card)
               <div class="card" style="width: 15rem;">
-                  <img src="{{$card['src']}}" class="card-img-top" alt="{{$card['titolo']}}">
+              <a href="{{ route('show',['id' => $key]) }}"><img src="{{$card['src']}}" class="card-img-top" alt="{{$card['titolo']}}"></a>
                   <div class="card-body">
                     <p class="card-text">{{$card['titolo']}}</p>
                   </div>
@@ -45,9 +28,9 @@ foreach ($cards as $val) {
         <section class="corte">
           
         
-              @foreach ($corte as $card)
+              @foreach ($corte as $key => $card)
               <div class="card" style="width: 15rem;">
-                <img src="{{$card['src']}}" class="card-img-top" alt="{{$card['titolo']}}">
+                <a href="{{ route('show',['id' => $key]) }}"><img src="{{$card['src']}}" class="card-img-top" alt="{{$card['titolo']}}"></a>
                 <div class="card-body">
                   <p class="card-text">{{$card['titolo']}}</p>
                 </div>
@@ -60,9 +43,9 @@ foreach ($cards as $val) {
         <section class="lunghe">
           
         
-              @foreach ($lunghe as $card)
+              @foreach ($lunghe as $key => $card)
               <div class="card" style="width: 15rem;">
-                <img src="{{$card['src']}}" class="card-img-top" alt="{{$card['titolo']}}">
+                <a href="{{ route('show',['id' => $key]) }}"><img src="{{$card['src']}}" class="card-img-top" alt="{{$card['titolo']}}"></a>
                 <div class="card-body">
                   <p class="card-text">{{$card['titolo']}}</p>
                 </div>

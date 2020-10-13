@@ -4,16 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class StaticPageController extends Controller
+class ProductController extends Controller
 {
-    public function home(){
-        return view('home');
+
+    protected $prodotti;
+
+    public function __construct()
+    {
+        $this->prodotti=config('prodotti',true);#prova a mettere false
     }
 
-    /* public function prodotti(){
-        #mettere qui la logica!
-        #passa gli array ciclati qui!
-        $cards=config('prodotti',true);  #prova a mettere false
+    public function prodotti()
+    {
+        $cards=$this->prodotti; 
 
         $cortissime=[];
         $corte=[];
@@ -30,10 +33,15 @@ class StaticPageController extends Controller
 
         #dd($cortissime,$corte,$lunghe);
         return view('prodotti',compact('cortissime','corte','lunghe'));
-    } */
+    }
 
-    public function contatti(){
+    public function show($id)
+    {
+        if(!array_key_exists($id,$this->prodotti)){
+            abort(404);
+        }
 
-        return view('contatti');
+        $card= $this->prodotti[$id];
+        return view("show",compact(('card')));
     }
 }

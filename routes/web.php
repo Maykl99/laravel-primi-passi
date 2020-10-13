@@ -18,8 +18,9 @@ use Illuminate\Support\Facades\Route;
 })->name('index'); # mi permette di chiamare le rotte per i collegamenti */
 
 Route::get('/', 'StaticPageController@home')->name('index');
-Route::get('/prodotti', 'StaticPageController@prodotti')->name('prodotti');
+Route::get('/prodotti', 'ProductController@prodotti')->name('prodotti');
 Route::get('/contatti', 'StaticPageController@contatti')->name('contatti');
+Route::get('prodotti/show{id}', 'ProductController@show')->name('show');
 
 /* Route::get('/prodotti', function () {  
     return view('prodotti');
